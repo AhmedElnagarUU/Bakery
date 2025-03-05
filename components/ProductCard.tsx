@@ -38,7 +38,7 @@ export default function ProductCard({ id, name, price, weight, image, hot }: Pro
       </div>
       <button 
         onClick={handleAddToCart}
-        className="w-full bg-orange-400 text-white py-2 rounded mt-2 opacity-0 group-hover:opacity-100 transition-opacity"
+        className="w-full bg-orange-400 text-white py-2 rounded mt-2 opacity-50 group-hover:opacity-100 transition-opacity"
       >
         Add to Cart
       </button>

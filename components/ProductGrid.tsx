@@ -125,36 +125,34 @@ export default function ProductGrid() {
         </button>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
         {products.map((product) => (
-          <ProductCard id={""} key={product.name} {...product} />
+          <ProductCard 
+            key={product.name} 
+            id={product.name} 
+            {...product} 
+          />
         ))}
       </div>
     </div>
   );
 
   return (
-    <>
-     
-      <div className="container mx-auto px-4 md:px-8 py-8 md:py-16">
-        <ProductSection 
-          title="CUSTOMER FAVORITES" 
-          products={customerFavorites} 
-          accent="orange" 
-        />
-        <ProductSection 
-          title="NEW ARRIVALS" 
-          products={newArrivals} 
-          accent="blue" 
-        />
-        <ProductSection 
-          title="SPECIAL OFFERS" 
-          products={specialOffers} 
-          accent="red" 
-        />
-      </div>
-
-      
-    </>
+    <div className="container mx-auto px-4 py-8">
+      <ProductSection
+        title="Customer Favorites"
+        products={customerFavorites}
+        accent="orange"
+      />
+      <ProductSection
+        title="New Arrivals"
+        products={newArrivals}
+        accent="blue"
+      />
+      <ProductSection
+        title="Special Offers"
+        products={specialOffers}
+        accent="red"
+      />
+    </div>
   );
 }
